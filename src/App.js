@@ -19,7 +19,7 @@ class App extends Component {
         <p className="App-intro">
           Welcome this is your website live
         </p>
-        <p>{this.state.envName}</p>
+        <p>Env: {this.state.envName}</p>
       </div>
     );
   }
