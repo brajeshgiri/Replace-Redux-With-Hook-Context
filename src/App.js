@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  state = { envName: '' }
+  componentDidMount() {
+    const envName = process.env.envName;
+    this.setState({ envName });
+  }
+
   render() {
     return (
       <div className="App">
@@ -13,6 +19,7 @@ class App extends Component {
         <p className="App-intro">
           Welcome this is your website live
         </p>
+        <p>{this.state.envName}</p>
       </div>
     );
   }
