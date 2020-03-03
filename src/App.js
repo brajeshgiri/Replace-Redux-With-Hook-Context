@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link } from "@reach/router";
+import { Store } from "./store";
 
-class App extends Component {
-  state = { envName: '' }
-  componentDidMount() {
-    const envName = process.env.envName;
-    this.setState({ envName });
-  }
+function App(props) {
+  const { state } = React.useContext(Store);
 
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Hello Vandana</h2>
+  return (
+    <React.Fragment>
+      <header className="header">
+        <div>
+          <h1>Replace Redux with useConext</h1>
+          <p>Pick your favourite episodes</p>
         </div>
-        <p className="App-intro">
-          Welcome this is your website live
-        </p>
-        <p>Env: {this.state.envName}</p>
-      </div>
-    );
-  }
+        <div>
+          <Link to="/">Home</Link>{" "}
+          <Link to="/faves">Favourite(s) {state.favourites.length}</Link>
+        </div>
+      </header>
+      {props.children}
+    </React.Fragment>
+  );
 }
-
 export default App;

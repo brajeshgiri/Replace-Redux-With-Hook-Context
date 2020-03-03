@@ -1,0 +1,22 @@
+exports[`App Component Matches the snapshot 1`] = `
+<div
+  className="App">
+  <div
+    className="App-header">
+    <img
+      alt="logo"
+      className="App-logo"
+      src="logo.svg" />
+    <h2>
+      Hello Vandana
+    </h2>
+  </div>
+  <p
+    className="App-intro">
+    Welcome this is your website live
+  </p>
+  <p>
+    Env: 
+  </p>
+</div>
+`;
