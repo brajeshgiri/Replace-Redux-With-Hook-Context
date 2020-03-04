@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
 import { Router } from "@reach/router";
+import App from "./App";
 import FavPage from "./FavPage";
 import HomePage from "./HomePage";
 import { StoreProvider } from "./store";
