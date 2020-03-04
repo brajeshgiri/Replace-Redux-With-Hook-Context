@@ -10,7 +10,7 @@ function App(props) {
       <header className="header">
         <div>
           <h1>Replace Redux with useConext</h1>
-          <p>Pick your favourite episodes</p>
+          <p>Pick your favourite episodes learn CI/CD</p>
         </div>
         <div>
           <Link to="/">Home</Link>{" "}
